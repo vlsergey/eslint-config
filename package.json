@@ -1,6 +1,6 @@
 {
   "name": "@vlsergey/eslint-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Default eslint rules for @vlsergey NPM packages",
   "module": "src/index.js",
   "scripts": {

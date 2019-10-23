@@ -1,0 +1,45 @@
+{
+  "name": "@vlsergey/eslint-config",
+  "version": "0.0.1",
+  "description": "Default eslint rules for @vlsergey NPM packages",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "eslint:check": "eslint --ignore-pattern \"!.eslintrc.js\" .eslintrc.js src/**/*.js",
+    "eslint:fix": "eslint --ignore-pattern \"!.eslintrc.js\" --fix .eslintrc.js src/**/*.js",
+    "preversion": "npm run eslint:check",
+    "version": "",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlsergey/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vlsergey/eslint-config/issues"
+  },
+  "homepage": "https://github.com/vlsergey/eslint-config#readme",
+  "keywords": [
+    "eslint",
+    "default",
+    "rules",
+    "vlsergey"
+  ],
+  "author": "Sergey Vladimirov <vlsergey@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.0",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-promise": "^4.2.0",
+    "eslint-plugin-react": "^7.16.0"
+  },
+  "peerDependencies": {
+    "babel-eslint": "^10.0.0",
+    "eslint": "^6.5.0",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-promise": "^4.2.0",
+    "eslint-plugin-react": "^7.16.0"
+  }
+}

@@ -2,7 +2,7 @@
   "name": "@vlsergey/eslint-config",
   "version": "0.0.1",
   "description": "Default eslint rules for @vlsergey NPM packages",
-  "main": ".eslintrc.js",
+  "module": "src/index.js",
   "scripts": {
     "eslint:check": "eslint --ignore-pattern \"!.eslintrc.js\" .eslintrc.js src/**/*.js",
     "eslint:fix": "eslint --ignore-pattern \"!.eslintrc.js\" --fix .eslintrc.js src/**/*.js",

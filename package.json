@@ -8,7 +8,7 @@
     "eslint:check": "eslint --ignore-pattern \"!.eslintrc.js\" .eslintrc.js src/**/*.js",
     "eslint:fix": "eslint --ignore-pattern \"!.eslintrc.js\" --fix .eslintrc.js src/**/*.js",
     "preversion": "npm run eslint:check",
-    "version": "",
+    "version": "npm publish --access=public",
     "postversion": "git push && git push --tags"
   },
   "repository": {
@@ -29,8 +29,8 @@
   "license": "MIT",
   "dependencies": {
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.5.0",
-    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint": "^6.7.1",
+    "eslint-plugin-flowtype": "^4.5.2",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-promise": "^4.2.0",
     "eslint-plugin-react": "^7.16.0"

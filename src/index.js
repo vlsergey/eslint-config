@@ -43,7 +43,14 @@ module.exports = {
     'block-spacing': [ 1, 'always' ],
 
     /* require or disallow trailing commas */
-    'comma-dangle': [ 1, 'always-multiline' ],
+    'comma-dangle': [ 1, {
+      arrays: 'only-multiline',
+      objects: 'only-multiline',
+      imports: 'only-multiline',
+      exports: 'only-multiline',
+      functions: 'never'
+    } ],
+
     /* enforce consistent spacing before and after commas */
     'comma-spacing': 1,
     /* enforce consistent spacing inside computed property brackets */
@@ -65,17 +72,23 @@ module.exports = {
     /* enforce consistent spacing before and after keywords */
     'keyword-spacing': 1,
 
+    /* require or disallow an empty line between class members */
     'lines-between-class-members': [ 1, 'always', { exceptAfterSingleLine: true } ],
 
     /* Require parentheses when invoking a constructor with no arguments */
     'new-parens': 1,
     /* require a newline after each call in a method chain */
     'newline-per-chained-call': 0,
+    /* disallow the use of console */
     'no-console': 0,
+    /* Disallow returning value in constructor */
+    'no-constructor-return': 2,
     /* Disallow Regular Expressions That Look Like Division */
     'no-div-regex': 1,
     /* disallow duplicate class members */
     'no-dupe-class-members': 1,
+    /* Disallow duplicate conditions in if-else-if chains */
+    'no-dupe-else-if': 2,
     /* Disallow duplicate imports */
     'no-duplicate-imports': 1,
     /* Disallow Floating Decimals */
@@ -89,6 +102,8 @@ module.exports = {
     /* disallow unnecessary parentheses */
     // conflicts with flow implicit casts
     'no-extra-parens': 0,
+    /* disallow assigning to imported bindings */
+    'no-import-assign': 2,
     /* disallow this keywords outside of classes or class-like objects */
     'no-invalid-this': 2,
     /* disallow if statements as the only statement in else blocks */
